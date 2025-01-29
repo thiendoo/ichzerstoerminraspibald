@@ -6,7 +6,7 @@ import requests
 # OpenWeatherMap API
 API_KEY = "c62f2ea1c7b5315200507ced0f98ad3b"
 CITY = "Zurich,CH"  # Ändere die Stadt nach Bedarf
-URL = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric"
+URL = "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units=metric".format(CITY, API_KEY)
 
 # Ports definieren
 TEMP_SENSOR = 2  # Angeschlossen am analogen Port A0
@@ -47,9 +47,9 @@ try:
         temp_indoor = read_temperature()
         temp_outdoor = get_outdoor_temperature()
         
-        print(f"Indoor: {temp_indoor}°C | Outdoor: {temp_outdoor}°C")
+        print("Indoor: {}°C | Outdoor: {}°C".format(temp_indoor, temp_outdoor))
         lcd.setRGB(0, 255, 0)  # Hintergrundfarbe setzen
-        lcd.setText(f"Indoor: {temp_indoor}C\nOutdoor: {temp_outdoor}C")
+        lcd.setText("Indoor: {}C\nOutdoor: {}C".format(temp_indoor, temp_outdoor))
         
         # LEDs steuern
         if temp_indoor < 20:
