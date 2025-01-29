@@ -1,1 +1,2 @@
 8015b9010d8f841d97feaa074e7e25c0
+curl "https://api.openweathermap.org/data/2.5/weather?q=Zurich,CH&appid=c62f2ea1c7b5315200507ced0f98ad3b&units=metric"
