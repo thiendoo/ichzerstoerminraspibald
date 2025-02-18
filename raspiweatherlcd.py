@@ -3,10 +3,10 @@ import grovepi
 import grove_rgb_lcd as lcd
 import requests
 
-# OpenWeatherMap API
-API_KEY = "c62f2ea1c7b5315200507ced0f98ad3b"
-CITY = "Zurich,CH"  # Ändere die Stadt nach Bedarf
-URL = "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units=metric".format(CITY, API_KEY)
+# Open-Meteo API (No Key)
+LAT = 47.3769  # Breitengrad für Zürich
+LON = 8.5417   # Längengrad für Zürich
+URL = f"https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&current_weather=true"
 
 # Ports definieren
 TEMP_SENSOR = 2  # Angeschlossen am analogen Port A0
