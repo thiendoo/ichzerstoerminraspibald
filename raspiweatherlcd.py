@@ -4,7 +4,7 @@ import grove_rgb_lcd as lcd
 import requests
 
 # OpenWeatherMap API
-API_KEY = "7b1af9568467f4ae0b784be905b4b3d1"  
+API_KEY = "ed57439b8d8662f4c85904e78f5e8d94"  
 CITY = "Zurich,CH"
 URL = "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units=metric".format(CITY, API_KEY)
 
